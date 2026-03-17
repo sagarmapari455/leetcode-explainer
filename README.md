@@ -1153,9 +1153,7 @@ MIT License - See LICENSE file for details
 
 ### Contact
 
-- 📧 Email: [your-email@example.com]
-- 💬 Discord: [Discord community link]
-- 🐦 Twitter: [@yourhandle]
+- 📧 Email: [sagarmapari30@gmail.com]
 
 ---
 
