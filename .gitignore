@@ -1,0 +1,44 @@
+# Environment Variables (NEVER commit these)
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+venv/
+env/
+.venv
+.eggs/
+*.egg-info/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.vercel/
+
+# Python cache
+*.pyc
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+
+# Cache
+.cache/

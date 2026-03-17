@@ -1,0 +1,15 @@
+# FastAPI Framework
+fastapi
+uvicorn[standard]
+
+# HTTP requests
+requests
+
+# Data validation
+pydantic
+
+# Environment variables
+python-dotenv
+
+# CORS support
+python-multipart

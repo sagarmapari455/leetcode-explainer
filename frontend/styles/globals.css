@@ -1,0 +1,186 @@
+/**
+ * Global styles for LeetCode AI Explainer
+ * Modern Design: Purple Gradients, Glassmorphism, Premium Feel
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0f0820;
+  background-image: linear-gradient(135deg, #0f0820 0%, #1a0f3a 50%, #2a0f5a 100%);
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 8, 32, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a855f7, #3b82f6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #d946ef, #60a5fa);
+}
+
+/* Smooth transitions */
+@layer components {
+  .transition-all {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white font-bold rounded-xl hover:from-purple-700 hover:to-blue-600 transition-all transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg backdrop-blur-md border border-purple-400/30;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 bg-white/10 border border-purple-400/50 text-white font-semibold rounded-lg hover:bg-white/20 transition-all backdrop-blur-sm;
+  }
+
+  .input-field {
+    @apply w-full px-6 py-3.5 bg-white/5 backdrop-blur-md border border-purple-400/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 transition-all shadow-lg;
+  }
+
+  .card {
+    @apply bg-gradient-to-br from-white/5 to-white/10 rounded-2xl p-6 border border-purple-400/20 backdrop-blur-xl transition-all hover:border-purple-400/50 hover:bg-gradient-to-br hover:from-white/10 hover:to-white/15 shadow-2xl;
+  }
+
+  .card-highlight {
+    @apply bg-gradient-to-r from-purple-500/20 to-blue-500/20 border-l-4 border-purple-400 backdrop-blur-md;
+  }
+
+  .section-title {
+    @apply text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 mb-4 mt-8 first:mt-0 flex items-center gap-2;
+  }
+
+  .section-subtitle {
+    @apply text-lg font-bold text-purple-300 mb-3;
+  }
+
+  .highlight-text {
+    @apply text-purple-300 font-bold;
+  }
+
+  .orange-accent {
+    @apply text-blue-300 font-semibold;
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/20 rounded-2xl;
+  }
+
+  /* Floating cards */
+  .floating {
+    @apply transition-all duration-300 hover:translate-y-[-4px] hover:shadow-2xl;
+  }
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, rgba(168, 85, 247, 0.1), rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1));
+  background-size: 1000px 100%;
+}
+
+/* Gradient text animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradientShift 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Pulse glow effect */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.5); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar for inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Select dropdown styling to match UI */
+select {
+  color-scheme: dark;
+}
+
+select option {
+  background-color: #1a0f3a;
+  color: #ffffff;
+  padding: 8px;
+  border: none;
+}
+
+select option:checked {
+  background: linear-gradient(#4f46e5, #4f46e5);
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
+select option:hover {
+  background-color: #3b2667;
+  color: #ffffff;
+}
+
+/* Gradient text animation */
+.gradient-text {
+  background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3);
+}
+
+.glow-sm {
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+}
